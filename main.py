@@ -1,14 +1,8 @@
-import tkinter as tk
-from tkinter import *
+from PySide6.QtWidgets import QApplication, QWidget
+import sys
 
-largura, altura = 650, 400
+app = QApplication(sys.argv)
 
-tela = tk.Tk()
-tela.geometry(f'{largura}x{altura}')
-tela.title('SATA')
-
-Label(tela,text='PC 1').place(x=30,y=altura/2)
-Label(tela,text='PC 2').place(x=largura/2,y=altura/2)
-Label(tela,text='PC 3').place(x=580,y=altura/2)
-
-tela.mainloop()
+janela = QWidget()
+janela.show()
+app.exec_()
