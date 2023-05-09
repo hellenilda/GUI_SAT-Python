@@ -1,4 +1,5 @@
 <div align="center">
-  <h1>System of automation and transference (SATA)</h1>
-  <p>Substituto do LOKI</p>
+  <h1>Secure Access Tech (SATA)</h1>
+  <p>(Tecnologia de acesso seguro)</p>
+  <p>Novo software substituto do LOKI</p>
 </div>
