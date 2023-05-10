@@ -11,9 +11,17 @@ class MainWindow(QMainWindow):
         self.setWindowTitle('Secure Access Tech')
         self.setFixedSize(700,500)
 
-        layoutLateral = QVBoxLayout()
-        layoutCima = QHBoxLayout()
-        layoutBaixo = QHBoxLayout()
+        frameSuperior = QFrame(self)
+        frameSuperior.setStyleSheet('''
+        background-color: lightgray;
+        ''')
+        frameSuperior.setGeometry(0,0,700,40)
+
+        frameLateral = QFrame(self)
+        frameLateral.setStyleSheet('''
+        background-color: gray;
+        ''')
+        frameLateral.setGeometry(0,40,60,460)
 
         btnPC1 = QPushButton('PC 1')
         btnPC2 = QPushButton('PC 2')
@@ -22,21 +30,9 @@ class MainWindow(QMainWindow):
         btnPC5 = QPushButton('PC 5')
         btnPC6 = QPushButton('PC 6')
 
-        layoutCima.addWidget(btnPC1)
-        layoutCima.addWidget(btnPC2)
-        layoutCima.addWidget(btnPC3)
-
-        layoutBaixo.addWidget(btnPC4)
-        layoutBaixo.addWidget(btnPC5)
-        layoutBaixo.addWidget(btnPC6)
-
         widget = QWidget()
 
         mainLayout = QVBoxLayout()
-
-        mainLayout.addLayout(layoutLateral)
-        mainLayout.addLayout(layoutCima)
-        mainLayout.addLayout(layoutBaixo)
 
         widget.setLayout(mainLayout)
         self.setCentralWidget(widget)
@@ -83,7 +79,6 @@ class MainWindow(QMainWindow):
         border-radius: 10px;
         height: 30px;
         ''')
-
 
         def PC1_clicado():
             print('PC 1')
