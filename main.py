@@ -1,40 +1,37 @@
 from PySide6.QtWidgets import *
-from PySide6.QtCore import QSize
+from PySide6.QtCore import *
+from PySide6.QtGui import *
+from PySide6.QtSvgWidgets import *
 from corDoLayout import *
 import sys
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
- 
+
         self.setWindowTitle('Secure Access Tech')
-        # self.setFixedSize(QSize(700,500))
+        self.setFixedSize(700,500)
 
         layoutCima = QHBoxLayout()
-        
-        layoutCima.addWidget(Color('red'))
-        layoutCima.addWidget(Color('pink'))
-        layoutCima.addWidget(Color('white'))
-        layoutCima.addWidget(Color('gray'))
-        layoutCima.addWidget(Color('black'))
+        layoutBaixo = QHBoxLayout()
+
+        # layoutCima.addWidget()
+
+        layoutCima.addWidget(QPushButton('PC 1'))
+        layoutCima.addWidget(QPushButton('PC 2'))
+        layoutCima.addWidget(QPushButton('PC 3'))
+
+        layoutBaixo.addWidget(QPushButton('PC 4'))
+        layoutBaixo.addWidget(QPushButton('PC 5'))
+        layoutBaixo.addWidget(QPushButton('PC 6'))
 
         widget = QWidget()
-        widget.setLayout(layoutCima)
+        mainLayout = QVBoxLayout()
+        mainLayout.addLayout(layoutCima)
+        mainLayout.addLayout(layoutBaixo)
+        widget.setLayout(mainLayout)
 
         self.setCentralWidget(widget)
-
-        # self.btnPC1 = QPushButton('PC 1')
-        # self.btnPC2 = QPushButton('PC 2')
-        # self.btnPC3 = QPushButton('PC 3')
-        # self.btnPC4 = QPushButton('PC 4')
-        # self.btnPC5 = QPushButton('PC 5')
-        # self.btnPC6 = QPushButton('PC 6')
-
-        # self.btnPC1.clicked.connect(self.clicked_button)
-
-    def clicked_button(self):
-        print('PC 1')
-
 
 app = QApplication(sys.argv)
 
