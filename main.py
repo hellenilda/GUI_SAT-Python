@@ -2,7 +2,6 @@ from PySide6.QtWidgets import *
 from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtSvgWidgets import *
-from corDoLayout import *
 import sys
 
 class MainWindow(QMainWindow):
@@ -32,38 +31,45 @@ class MainWindow(QMainWindow):
         layoutBaixo.addWidget(btnPC5)
         layoutBaixo.addWidget(btnPC6)
 
+
         widget = QWidget()
+
         mainLayout = QVBoxLayout()
         mainLayout.addLayout(layoutCima)
         mainLayout.addLayout(layoutBaixo)
-        widget.setLayout(mainLayout)
 
+        widget.setLayout(mainLayout)
         self.setCentralWidget(widget)
 
-        btnPC1.clicked.connect(self.PC1_clicado)
-        btnPC2.clicked.connect(self.PC2_clicado)
-        btnPC3.clicked.connect(self.PC3_clicado)
-        btnPC4.clicked.connect(self.PC4_clicado)
-        btnPC5.clicked.connect(self.PC5_clicado)
-        btnPC6.clicked.connect(self.PC6_clicado)
-    
-    
-    def PC1_clicado(self):
-        print('PC 1')
-    def PC2_clicado(self):
-        print('PC 2')
-    def PC3_clicado(self):
-        print('PC 3')
-    def PC4_clicado(self):
-        print('PC 4')
-    def PC5_clicado(self):
-        print('PC 5')
-    def PC6_clicado(self):
-        print('PC 6')
+        btnPC1.setStyleSheet('''
+        background-color: white;
+        border: 5px black;
+        border-radius: 10px;
+        height: 30px;
+        ''')
+
+        def PC1_clicado():
+            print('PC 1')
+        def PC2_clicado():
+            print('PC 2')
+        def PC3_clicado():
+            print('PC 3')
+        def PC4_clicado():
+            print('PC 4')
+        def PC5_clicado():
+            print('PC 5')
+        def PC6_clicado():
+            print('PC 6')
+
+        btnPC1.clicked.connect(PC1_clicado)
+        btnPC2.clicked.connect(PC2_clicado)
+        btnPC3.clicked.connect(PC3_clicado)
+        btnPC4.clicked.connect(PC4_clicado)
+        btnPC5.clicked.connect(PC5_clicado)
+        btnPC6.clicked.connect(PC6_clicado)
+
 
 app = QApplication(sys.argv)
-
 janela = MainWindow()
 janela.show()
-
 app.exec()
