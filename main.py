@@ -30,9 +30,8 @@ class MainWindow(QMainWindow):
         btnPC5 = QPushButton('PC 5')
         btnPC6 = QPushButton('PC 6')
 
-        widget = QWidget()
-
         mainLayout = QVBoxLayout()
+        widget = QWidget()
 
         widget.setLayout(mainLayout)
         self.setCentralWidget(widget)
