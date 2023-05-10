@@ -11,10 +11,9 @@ class MainWindow(QMainWindow):
         self.setWindowTitle('Secure Access Tech')
         self.setFixedSize(700,500)
 
+        layoutLateral = QVBoxLayout()
         layoutCima = QHBoxLayout()
         layoutBaixo = QHBoxLayout()
-
-        # layoutCima.addWidget()
 
         btnPC1 = QPushButton('PC 1')
         btnPC2 = QPushButton('PC 2')
@@ -31,15 +30,17 @@ class MainWindow(QMainWindow):
         layoutBaixo.addWidget(btnPC5)
         layoutBaixo.addWidget(btnPC6)
 
-
         widget = QWidget()
 
         mainLayout = QVBoxLayout()
+
+        mainLayout.addLayout(layoutLateral)
         mainLayout.addLayout(layoutCima)
         mainLayout.addLayout(layoutBaixo)
 
         widget.setLayout(mainLayout)
         self.setCentralWidget(widget)
+
 
         btnPC1.setStyleSheet('''
         background-color: white;
@@ -47,6 +48,42 @@ class MainWindow(QMainWindow):
         border-radius: 10px;
         height: 30px;
         ''')
+
+        btnPC2.setStyleSheet('''
+        background-color: white;
+        border: 5px black;
+        border-radius: 10px;
+        height: 30px;
+        ''')
+
+        btnPC3.setStyleSheet('''
+        background-color: white;
+        border: 5px black;
+        border-radius: 10px;
+        height: 30px;
+        ''')
+
+        btnPC4.setStyleSheet('''
+        background-color: white;
+        border: 5px black;
+        border-radius: 10px;
+        height: 30px;
+        ''')
+
+        btnPC5.setStyleSheet('''
+        background-color: white;
+        border: 5px black;
+        border-radius: 10px;
+        height: 30px;
+        ''')
+
+        btnPC6.setStyleSheet('''
+        background-color: white;
+        border: 5px black;
+        border-radius: 10px;
+        height: 30px;
+        ''')
+
 
         def PC1_clicado():
             print('PC 1')
