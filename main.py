@@ -17,13 +17,20 @@ class MainWindow(QMainWindow):
 
         # layoutCima.addWidget()
 
-        layoutCima.addWidget(QPushButton('PC 1'))
-        layoutCima.addWidget(QPushButton('PC 2'))
-        layoutCima.addWidget(QPushButton('PC 3'))
+        btnPC1 = QPushButton('PC 1')
+        btnPC2 = QPushButton('PC 2')
+        btnPC3 = QPushButton('PC 3')
+        btnPC4 = QPushButton('PC 4')
+        btnPC5 = QPushButton('PC 5')
+        btnPC6 = QPushButton('PC 6')
 
-        layoutBaixo.addWidget(QPushButton('PC 4'))
-        layoutBaixo.addWidget(QPushButton('PC 5'))
-        layoutBaixo.addWidget(QPushButton('PC 6'))
+        layoutCima.addWidget(btnPC1)
+        layoutCima.addWidget(btnPC2)
+        layoutCima.addWidget(btnPC3)
+
+        layoutBaixo.addWidget(btnPC4)
+        layoutBaixo.addWidget(btnPC5)
+        layoutBaixo.addWidget(btnPC6)
 
         widget = QWidget()
         mainLayout = QVBoxLayout()
@@ -32,6 +39,27 @@ class MainWindow(QMainWindow):
         widget.setLayout(mainLayout)
 
         self.setCentralWidget(widget)
+
+        btnPC1.clicked.connect(self.PC1_clicado)
+        btnPC2.clicked.connect(self.PC2_clicado)
+        btnPC3.clicked.connect(self.PC3_clicado)
+        btnPC4.clicked.connect(self.PC4_clicado)
+        btnPC5.clicked.connect(self.PC5_clicado)
+        btnPC6.clicked.connect(self.PC6_clicado)
+    
+    
+    def PC1_clicado(self):
+        print('PC 1')
+    def PC2_clicado(self):
+        print('PC 2')
+    def PC3_clicado(self):
+        print('PC 3')
+    def PC4_clicado(self):
+        print('PC 4')
+    def PC5_clicado(self):
+        print('PC 5')
+    def PC6_clicado(self):
+        print('PC 6')
 
 app = QApplication(sys.argv)
 
