@@ -1,7 +1,4 @@
 from PySide6.QtWidgets import *
-from PySide6.QtCore import *
-from PySide6.QtGui import *
-from PySide6.QtSvgWidgets import *
 import sys
 
 class MainWindow(QMainWindow):
@@ -28,11 +25,27 @@ class MainWindow(QMainWindow):
         background-color: gray;
         border-radius: 10px;
         ''')
-        frame1.setGeometry(80,60,110,100)
+        frame1.setGeometry(100,80,120,140)
 
-        btnPC1 = QPushButton(self)
-        btnPC1.setText('PC 1')
-        btnPC1.setGeometry(100,200,60,30)
+        btnDesbloquearPC1 = QPushButton(self)
+        btnDesbloquearPC1.setText('V')
+        btnDesbloquearPC1.setGeometry(108,188,35,25)
+        btnDesbloquearPC1.setStyleSheet('''
+        background-color: green;
+        border-radius: 8px;
+        color: white;
+        font-size: 18px;
+        ''')
+
+        btnBloquearPC1 = QPushButton(self)
+        btnBloquearPC1.setText('X')
+        btnBloquearPC1.setGeometry(175,188,35,25)
+        btnBloquearPC1.setStyleSheet('''
+        background-color: red;
+        border-radius: 8px;
+        color: white;
+        font-size: 18px;
+        ''')
 
         # btnPC1.setStyleSheet('''
         # background-color: white;
