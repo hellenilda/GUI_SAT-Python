@@ -41,6 +41,16 @@ class MainWindow(QMainWindow):
         ''')
         frame1.setGeometry(50,80,180,200)
 
+        txt_PC1 = QLabel(self)
+        txt_PC1.setText("PC  1")
+        txt_PC1.setGeometry(117,90,50,25)
+        txt_PC1.setStyleSheet('''
+        background-color: lightgray;
+        border-radius: 8px;
+        font-family: Verdana;
+        font-size: 18px bold;
+        ''')
+
         btnDesbloquearPC1 = QPushButton(self)
         btnDesbloquearPC1.setGeometry(60,230,50,40)
         btnDesbloquearPC1.setCursor(Qt.PointingHandCursor)
