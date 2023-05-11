@@ -27,6 +27,7 @@ class MainWindow(QMainWindow):
         ''')
         frame1.setGeometry(100,80,120,140)
 
+
         btnDesbloquearPC1 = QPushButton(self)
         btnDesbloquearPC1.setText('V')
         btnDesbloquearPC1.setGeometry(108,188,35,25)
@@ -47,32 +48,46 @@ class MainWindow(QMainWindow):
         font-size: 18px;
         ''')
 
-        # btnPC1.setStyleSheet('''
-        # background-color: white;
-        # border: 5px black;
-        # border-radius: 10px;
-        # height: 30px;
-        # ''')
+        def desbloquear_PC1():
+            print('PC 1 desbloqueado!')
+        # def desbloquear_PC2():
+        #     print('PC 2 desbloqueado!')
+        # def desbloquear_PC3():
+        #     print('PC 3 desbloqueado!')
+        # def desbloquear_PC4():
+        #     print('PC 4 desbloqueado!')
+        # def desbloquear_PC5():
+        #     print('PC 5 desbloqueado!')
+        # def desbloquear_PC6():
+        #     print('PC 6 desbloqueado!')
 
-        # def PC1_clicado():
-        #     print('PC 1')
-        # def PC2_clicado():
-        #     print('PC 2')
-        # def PC3_clicado():
-        #     print('PC 3')
-        # def PC4_clicado():
-        #     print('PC 4')
-        # def PC5_clicado():
-        #     print('PC 5')
-        # def PC6_clicado():
-        #     print('PC 6')
+        btnDesbloquearPC1.clicked.connect(desbloquear_PC1)
+        # btnDesbloquearPC2.clicked.connect(desbloquear_PC2)
+        # btnDesbloquearPC3.clicked.connect(desbloquear_PC3)
+        # btnDesbloquearPC4.clicked.connect(desbloquear_PC4)
+        # btnDesbloquearPC5.clicked.connect(desbloquear_PC5)
+        # btnDesbloquearPC6.clicked.connect(desbloquear_PC6)
 
-        # btnPC1.clicked.connect(PC1_clicado)
-        # btnPC2.clicked.connect(PC2_clicado)
-        # btnPC3.clicked.connect(PC3_clicado)
-        # btnPC4.clicked.connect(PC4_clicado)
-        # btnPC5.clicked.connect(PC5_clicado)
-        # btnPC6.clicked.connect(PC6_clicado)
+
+        def bloquear_PC1():
+            print('PC 1 bloqueado!')
+        # def bloquear_PC2():
+        #     print('PC 2 bloqueado!')
+        # def bloquear_PC3():
+        #     print('PC 3 bloqueado!')
+        # def bloquear_PC4():
+        #     print('PC 4 bloqueado!')
+        # def bloquear_PC5():
+        #     print('PC 5 bloqueado!')
+        # def bloquear_PC6():
+        #     print('PC 6 bloqueado!')
+        
+        btnBloquearPC1.clicked.connect(bloquear_PC1)
+        # btnDesbloquearPC2.clicked.connect(bloquear_PC2)
+        # btnDesbloquearPC3.clicked.connect(bloquear_PC3)
+        # btnDesbloquearPC4.clicked.connect(bloquear_PC4)
+        # btnDesbloquearPC5.clicked.connect(bloquear_PC5)
+        # btnDesbloquearPC6.clicked.connect(bloquear_PC6)
 
 
 app = QApplication(sys.argv)
