@@ -1,5 +1,6 @@
 from PySide6.QtWidgets import *
-from PySide6.QtCore import Qt
+from PySide6.QtCore import *
+from PySide6.QtGui import *
 import sys
 
 class MainWindow(QMainWindow):
@@ -8,6 +9,9 @@ class MainWindow(QMainWindow):
 
         self.setWindowTitle('Secure Access Tech')
         self.setFixedSize(700,500)
+
+        iconUnlock = QIcon("icons/unlock-white.png")
+        iconLock = QIcon("icons/lock-white.png")
 
         frameSuperior = QFrame(self)
         frameSuperior.setStyleSheet('''
@@ -30,9 +34,10 @@ class MainWindow(QMainWindow):
 
 
         btnDesbloquearPC1 = QPushButton(self)
-        btnDesbloquearPC1.setText('V')
         btnDesbloquearPC1.setGeometry(83,188,35,25)
         btnDesbloquearPC1.setCursor(Qt.PointingHandCursor)
+        btnDesbloquearPC1.setIcon(iconUnlock)
+        btnDesbloquearPC1.setIconSize(QSize(18,18))
         btnDesbloquearPC1.setStyleSheet('''
         background-color: green;
         border-radius: 8px;
@@ -41,9 +46,10 @@ class MainWindow(QMainWindow):
         ''')
 
         btnBloquearPC1 = QPushButton(self)
-        btnBloquearPC1.setText('X')
         btnBloquearPC1.setGeometry(150,188,35,25)
         btnBloquearPC1.setCursor(Qt.PointingHandCursor)
+        btnBloquearPC1.setIcon(iconLock)
+        btnBloquearPC1.setIconSize(QSize(18,18))
         btnBloquearPC1.setStyleSheet('''
         background-color: red;
         border-radius: 8px;
@@ -60,9 +66,10 @@ class MainWindow(QMainWindow):
 
 
         btnDesbloquearPC2 = QPushButton(self)
-        btnDesbloquearPC2.setText('V')
         btnDesbloquearPC2.setGeometry(298,188,35,25)
         btnDesbloquearPC2.setCursor(Qt.PointingHandCursor)
+        btnDesbloquearPC2.setIcon(iconUnlock)
+        btnDesbloquearPC2.setIconSize(QSize(18,18))
         btnDesbloquearPC2.setStyleSheet('''
         background-color: green;
         border-radius: 8px;
@@ -71,9 +78,10 @@ class MainWindow(QMainWindow):
         ''')
 
         btnBloquearPC2 = QPushButton(self)
-        btnBloquearPC2.setText('X')
         btnBloquearPC2.setGeometry(368,188,35,25)
         btnBloquearPC2.setCursor(Qt.PointingHandCursor)
+        btnBloquearPC2.setIcon(iconLock)
+        btnBloquearPC2.setIconSize(QSize(18,18))
         btnBloquearPC2.setStyleSheet('''
         background-color: red;
         border-radius: 8px;
@@ -90,9 +98,10 @@ class MainWindow(QMainWindow):
 
 
         btnDesbloquearPC3 = QPushButton(self)
-        btnDesbloquearPC3.setText('V')
         btnDesbloquearPC3.setGeometry(508,188,35,25)
         btnDesbloquearPC3.setCursor(Qt.PointingHandCursor)
+        btnDesbloquearPC3.setIcon(iconUnlock)
+        btnDesbloquearPC3.setIconSize(QSize(18,18))
         btnDesbloquearPC3.setStyleSheet('''
         background-color: green;
         border-radius: 8px;
@@ -101,9 +110,10 @@ class MainWindow(QMainWindow):
         ''')
 
         btnBloquearPC3 = QPushButton(self)
-        btnBloquearPC3.setText('X')
         btnBloquearPC3.setGeometry(575,188,35,25)
         btnBloquearPC3.setCursor(Qt.PointingHandCursor)
+        btnBloquearPC3.setIcon(iconLock)
+        btnBloquearPC3.setIconSize(QSize(18,18))
         btnBloquearPC3.setStyleSheet('''
         background-color: red;
         border-radius: 8px;
