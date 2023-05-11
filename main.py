@@ -1,4 +1,5 @@
 from PySide6.QtWidgets import *
+from PySide6.QtCore import Qt
 import sys
 
 class MainWindow(QMainWindow):
@@ -31,6 +32,7 @@ class MainWindow(QMainWindow):
         btnDesbloquearPC1 = QPushButton(self)
         btnDesbloquearPC1.setText('V')
         btnDesbloquearPC1.setGeometry(83,188,35,25)
+        btnDesbloquearPC1.setCursor(Qt.PointingHandCursor)
         btnDesbloquearPC1.setStyleSheet('''
         background-color: green;
         border-radius: 8px;
@@ -41,6 +43,7 @@ class MainWindow(QMainWindow):
         btnBloquearPC1 = QPushButton(self)
         btnBloquearPC1.setText('X')
         btnBloquearPC1.setGeometry(150,188,35,25)
+        btnBloquearPC1.setCursor(Qt.PointingHandCursor)
         btnBloquearPC1.setStyleSheet('''
         background-color: red;
         border-radius: 8px;
@@ -59,6 +62,7 @@ class MainWindow(QMainWindow):
         btnDesbloquearPC2 = QPushButton(self)
         btnDesbloquearPC2.setText('V')
         btnDesbloquearPC2.setGeometry(298,188,35,25)
+        btnDesbloquearPC2.setCursor(Qt.PointingHandCursor)
         btnDesbloquearPC2.setStyleSheet('''
         background-color: green;
         border-radius: 8px;
@@ -69,6 +73,7 @@ class MainWindow(QMainWindow):
         btnBloquearPC2 = QPushButton(self)
         btnBloquearPC2.setText('X')
         btnBloquearPC2.setGeometry(368,188,35,25)
+        btnBloquearPC2.setCursor(Qt.PointingHandCursor)
         btnBloquearPC2.setStyleSheet('''
         background-color: red;
         border-radius: 8px;
@@ -87,6 +92,7 @@ class MainWindow(QMainWindow):
         btnDesbloquearPC3 = QPushButton(self)
         btnDesbloquearPC3.setText('V')
         btnDesbloquearPC3.setGeometry(508,188,35,25)
+        btnDesbloquearPC3.setCursor(Qt.PointingHandCursor)
         btnDesbloquearPC3.setStyleSheet('''
         background-color: green;
         border-radius: 8px;
@@ -97,6 +103,7 @@ class MainWindow(QMainWindow):
         btnBloquearPC3 = QPushButton(self)
         btnBloquearPC3.setText('X')
         btnBloquearPC3.setGeometry(575,188,35,25)
+        btnBloquearPC3.setCursor(Qt.PointingHandCursor)
         btnBloquearPC3.setStyleSheet('''
         background-color: red;
         border-radius: 8px;
