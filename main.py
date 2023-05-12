@@ -12,7 +12,6 @@ class MainWindow(QMainWindow):
 
         iconeDesbloquear = QIcon("icons/unlock-white.svg")
         iconeBloquear = QIcon("icons/lock-white.svg")
-        iconeMonitor = QIcon("icons/monitor.svg")
 
 
         frameBackground = QFrame(self)
@@ -43,6 +42,10 @@ class MainWindow(QMainWindow):
         font-family: Verdana;
         font-size: 18px bold;
         ''')
+
+        iconeMonitor = QLabel(self)
+        iconeMonitor.setPixmap(QPixmap("icons/monitor.png"))
+        iconeMonitor.setGeometry(200,115,120,140)
 
         btnDesbloquearPC1 = QPushButton(self)
         btnDesbloquearPC1.setGeometry(165,255,60,50)
@@ -148,11 +151,19 @@ class MainWindow(QMainWindow):
         # btnDesbloquearPC6.clicked.connect(desbloquear_PC6)
 
 
+        def pc_Bloqueado(x,y,width,height):
+            bloqueado = QPixmap("icons/lock-black.png")
+            iconeMonitor.setPixmap(bloqueado)
+            iconeMonitor.setGeometry(x,y,width,height)
+
+
         def bloquear_PC1():
-            print('PC 1 bloqueado!')
+            pc_Bloqueado(200,115,120,140)
         def bloquear_PC2():
+            pc_Bloqueado()
             print('PC 2 bloqueado!')
         def bloquear_PC3():
+            pc_Bloqueado()
             print('PC 3 bloqueado!')
         # def bloquear_PC4():
         #     print('PC 4 bloqueado!')
