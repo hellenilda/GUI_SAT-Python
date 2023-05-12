@@ -49,9 +49,11 @@ class MainWindow(QMainWindow):
         ''')
 
         #   Ícone do monitor do PC 1
+        monitor = QPixmap("icons/monitor.png")
         iconeMonitor = QLabel(self)
-        iconeMonitor.setPixmap(QPixmap("icons/monitor.png"))
+        iconeMonitor.setPixmap(monitor)
         iconeMonitor.setGeometry(200,115,120,140)
+
 
         #   Botão para desbloquear o PC 1
         btnDesbloquearPC1 = QPushButton(self)
@@ -144,8 +146,14 @@ class MainWindow(QMainWindow):
         ''')
 
 
+        def PC_Desbloqueado():
+            iconeMonitor.setPixmap(monitor)
+            iconeMonitor.setGeometry(200,115,120,140)
+
+
         #   Função para desbloquear o PC 1
         def desbloquear_PC1():
+            PC_Desbloqueado()
             print('PC 1 desbloqueado!')
         #   Função para desbloquear o PC 2
         def desbloquear_PC2():
@@ -173,7 +181,7 @@ class MainWindow(QMainWindow):
 
 
         #   Função que altera o ícone dos PCs para bloqueado
-        def pc_Bloqueado(x,y,width,height):
+        def PC_Bloqueado(x,y,width,height):
             bloqueado = QPixmap("icons/lock-black.png")
             iconeMonitor.setPixmap(bloqueado)
             iconeMonitor.setGeometry(x,y,width,height)
@@ -181,14 +189,15 @@ class MainWindow(QMainWindow):
 
         #   Função para bloquear o PC 1
         def bloquear_PC1():
-            pc_Bloqueado(200,115,120,140)
+            PC_Bloqueado(200,115,120,140)
+            print('PC 1 bloqueado!')
         #   Função para bloquear o PC 2
         def bloquear_PC2():
-            pc_Bloqueado()
+            PC_Bloqueado()
             print('PC 2 bloqueado!')
         #   Função para bloquear o PC 3
         def bloquear_PC3():
-            pc_Bloqueado()
+            PC_Bloqueado()
             print('PC 3 bloqueado!')
         # def bloquear_PC4():
         #     print('PC 4 bloqueado!')
