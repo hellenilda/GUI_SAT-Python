@@ -8,7 +8,7 @@ class MainWindow(QMainWindow):
         super(MainWindow, self).__init__()
 
         self.setWindowTitle('Secure Access Tech')
-        self.setFixedSize(900,600)
+        self.setFixedSize(1280,720)
 
         iconeDesbloquear = QIcon("icons/unlock-white.svg")
         iconeBloquear = QIcon("icons/lock-white.svg")
@@ -19,13 +19,13 @@ class MainWindow(QMainWindow):
         frameBackground.setStyleSheet('''
         background-color: gray;
         ''')
-        frameBackground.setGeometry(0,0,900,600)
+        frameBackground.setGeometry(0,0,1280,720)
 
         frameSuperior = QFrame(self)
         frameSuperior.setStyleSheet('''
         background-color: lightgray;
         ''')
-        frameSuperior.setGeometry(0,0,900,40)
+        frameSuperior.setGeometry(0,0,1280,40)
 
         # frameLateral = QFrame(self)
         # frameLateral.setStyleSheet('''
